@@ -21,6 +21,8 @@ public abstract class Figura {
         origen.setY(y);
     }
 
+    public abstract double calcularSemiPerimetro();
+
     @Override
     public String toString(){
         return "("+origen.getX()+" , "+origen.getY()+")\n";

@@ -24,9 +24,18 @@ public class Rectangulo extends Figura{
     public double calcularPerimetro(){
         return 2*a +2*b;
     }
+
+    @Override
+    public double calcularSemiPerimetro(){
+        return 0;
+    }
     @Override
     public String toString(){
-        return super.toString()+"Ancho: "+a+"Largo: " +b;
+        return "\n---------------------------\n"
+                +"Circulo\n"
+                + super.toString()+" *)Ancho: "+a+"\n *)Largo: " +b+" \n *) Area: "+calcularArea() + " \n *) Perimetro: "+calcularPerimetro()
+                ;
+
     }
 }
 

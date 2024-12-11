@@ -19,17 +19,29 @@ public class Triangulo extends Figura{
         c = sc.nextDouble();
     }
 
-    @Override
-    public double calcularArea(){
-        return a*b ;
-    }
+
     @Override
     public double calcularPerimetro(){
         return a+b+c;
     }
+
+    @Override
+    public double calcularSemiPerimetro(){
+        return calcularPerimetro()/2;
+    }
+    @Override
+    public double calcularArea(){
+        double s= calcularSemiPerimetro();
+        return  Math.sqrt(s*(s-a)*(s-b)*(s-c)) ;
+    }
     @Override
     public String toString(){
-        return super.toString()+"Radio: "+a;
+        return "---------------------------\n"
+                +"Triangulo\n"
+                + super.toString()+" *)Lado 1: "+a+"\n *)Lado 2: " +b+"\n *)Lado 3: " +c
+                +" \n *) Area: "+calcularArea() + " \n *) Perimetro: "+calcularPerimetro()
+                +"\n---------------------------\n";
+
     }
 }
 
